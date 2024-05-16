@@ -16,8 +16,9 @@
     "Themes"
   ],
   "keywords": [
+    "vscode",
     "theme",
-    "light",
+    "vesper purple",
     "dark"
   ],
   "contributes": {
