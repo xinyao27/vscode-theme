@@ -1,11 +1,12 @@
 export const palette = {
-  primary: ['#c391e6', '#c391e69f'],
-  secondary: ['#66b395', '#26966a'],
-  destructive: ['#ff8787', '#ff8787aa'],
+  primary: ['#c391e6', '#c391e69f', '#c391e630'],
+  secondary: ['#66b395', '#26966a', '#66b39530'],
+  destructive: ['#ff8787', '#ff8787aa', '#ff878730'],
   warning: ['#e2c97e', '#e2c97e'],
   dark: ['#0d0d0d', '#555555'],
   light: ['#f0f0f0', '#cccccc'],
   foreground: ['#999999'],
+  selection: ['#ffffff17', '#ffffff27', '#ffffff37'],
   disabled: ['#444444'],
   border: ['#ffffff17', '#ffffff27', '#ffffff37'],
 
