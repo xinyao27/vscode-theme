@@ -31,11 +31,17 @@
     ]
   },
   "scripts": {
-    "dev": "bun --watch run ./scripts/compile.ts"
+    "dev": "bun --watch run ./scripts/compile.ts",
+    "build": "bun run ./scripts/compile.ts",
+    "package": "vsce package",
+    "publish": "vsce publish",
+    "release": "bun build && release-it && bun package && bun publish"
   },
   "devDependencies": {
     "@types/bun": "^1.1.2",
-    "@xystack/style-guide": "^0.0.5"
+    "@vscode/vsce": "^2.26.1",
+    "@xystack/style-guide": "^0.0.5",
+    "release-it": "^17.2.1"
   },
   "prettier": "@xystack/style-guide/prettier"
 }
