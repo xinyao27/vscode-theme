@@ -1,0 +1,40 @@
+{
+  "name": "vesper-purple-theme",
+  "displayName": "Vesper Purple Theme",
+  "description": "An vesper purple theme for VS Code",
+  "version": "0.0.0",
+  "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xinyao27/vscode-theme"
+  },
+  "publisher": "xinyao27",
+  "engines": {
+    "vscode": "^1.64.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "light",
+    "dark"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Vesper Purple",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vesper-purple-color-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "dev": "bun --watch run ./scripts/compile.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.2",
+    "@xystack/style-guide": "^0.0.5"
+  },
+  "prettier": "@xystack/style-guide/prettier"
+}

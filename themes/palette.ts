@@ -1,0 +1,37 @@
+export const palette = {
+  primary: ['#c391e6', '#c391e69f'],
+  secondary: ['#66b395', '#26966a'],
+  destructive: ['#ff8787', '#ff8787aa'],
+  warning: ['#e2c97e', '#e2c97e'],
+  dark: ['#0d0d0d', '#555555'],
+  light: ['#f0f0f0', '#cccccc'],
+  foreground: ['#999999'],
+  disabled: ['#444444'],
+  border: ['#ffffff17', '#ffffff27', '#ffffff37'],
+
+  token: {
+    default: ['#dddddd', '#333333'],
+    variable: ['#ed9cc2', '#c05386'],
+    keyword: ['#ed9cc2', '#c05386'],
+    number: ['#f6c177', '#c7792b'],
+    constant: ['#ed9cc2', '#c05386'],
+    parameter: ['#a0a5d6', '#6b588e'],
+    function: ['#5fb5be', '#668f9a'],
+    string: ['#888', '#444'],
+    class: ['#f3a580', '#b5855c'],
+    operator: ['#ffffff8f', '#0000005f'],
+    comment: ['#ffffff4f', '#0000004f'],
+    decorators: ['#ffffff5f', '#0000005f'],
+  },
+
+  ansi: {
+    black: ['#1e1e1e', '#555555'],
+    red: ['#e47474', '#e47474'],
+    green: ['#66b395', '#66b395'],
+    yellow: ['#e2c97e', '#e2c97e'],
+    blue: ['#fff', '#fff'],
+    magenta: ['#c391e6', '#c391e6'],
+    cyan: ['#6ab8c0', '#6ab8c0'],
+    white: ['#dddddd', '#dddddd'],
+  },
+}
