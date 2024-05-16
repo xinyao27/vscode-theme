@@ -7,13 +7,33 @@ myGreeter.greeting = 'howdy'
 myGreeter.showGreeting()
 a.foo()
 
-class SpecialGreeter extends Greeter {
+export class SpecialGreeter extends Greeter {
   constructor() {
     super('Very special\n greetings')
+  }
+
+  /**
+   * A very special greeting
+   * @public
+   * @remarks
+   * This method is special
+   * @example
+   * ```ts
+   * const greeter = new SpecialGreeter()
+   * greeter.greet()
+   * ```
+   * @beta
+   * @returns void
+   * @deprecated
+   */
+  greet() {
+    console.log('Very special greetings')
   }
 }
 
 const regex = /^hell\/o/
+
+delete sdsds
 
 // Tests -----------------------------
 
@@ -43,3 +63,5 @@ export const obj = {
 function foo(a: string) {
   return 'foo ' + a
 }
+
+export type MyType = string | null

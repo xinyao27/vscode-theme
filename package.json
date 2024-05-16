@@ -31,8 +31,8 @@
     ]
   },
   "scripts": {
-    "dev": "bun --watch run ./scripts/compile.ts",
-    "build": "bun run ./scripts/compile.ts",
+    "dev": "bun --watch run ./scripts/index.ts",
+    "build": "bun run ./scripts/index.ts",
     "package": "vsce package",
     "publish": "vsce publish",
     "release": "bun run build && release-it && bun run package && bun run publish"
