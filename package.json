@@ -35,7 +35,7 @@
     "build": "bun run ./scripts/compile.ts",
     "package": "vsce package",
     "publish": "vsce publish",
-    "release": "bun build && release-it && bun package && bun publish"
+    "release": "bun run build && release-it && bun run package && bun run publish"
   },
   "devDependencies": {
     "@types/bun": "^1.1.2",
