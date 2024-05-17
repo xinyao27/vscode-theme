@@ -1,7 +1,7 @@
 {
   "name": "vesper-purple-theme",
   "displayName": "Vesper Purple Theme",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "An vesper purple theme for VS Code",
   "type": "module",
   "icon": "images/icon.png",
