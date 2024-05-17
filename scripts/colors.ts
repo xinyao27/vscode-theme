@@ -98,6 +98,6 @@ export const Themes = {
   blue: ['#6394bf', '#296aa3'],
   red: ['#cb7676', '#ab5959'],
   orange: ['#d4976c', '#a65e2b'],
-  yellow: ['#e6cc77', '#bda437'],
+  yellow: ['#f6c177', '#f6c17790'],
   magenta: ['#c391e6', '#c391e690'],
 } satisfies Record<string, [string, string] | string>
