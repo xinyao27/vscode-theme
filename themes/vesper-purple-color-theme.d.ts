@@ -1,4 +1,4 @@
-interface TokenColor {
+export interface TokenColor {
   name?: string
   scope: string | string[]
   settings: {
@@ -7,12 +7,12 @@ interface TokenColor {
   }
 }
 
-interface Rule {
+export interface Rule {
   token: string
   foreground: string
 }
 
-interface ColorTheme {
+export interface Theme {
   name: string
   base: string
   colors: Record<string, string>
@@ -20,4 +20,6 @@ interface ColorTheme {
   rules: Rule[]
 }
 
-export default ColorTheme
+const theme: Theme
+
+export default theme

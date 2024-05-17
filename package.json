@@ -1,39 +1,24 @@
 {
   "name": "vesper-purple-theme",
   "displayName": "Vesper Purple Theme",
+  "version": "0.1.2",
   "description": "An vesper purple theme for VS Code",
   "type": "module",
-  "version": "0.1.2",
   "icon": "images/icon.png",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/xinyao27/vscode-theme"
-  },
-  "publisher": "xinyao27",
-  "engines": {
-    "vscode": "^1.64.0"
-  },
-  "categories": [
-    "Themes"
-  ],
   "keywords": [
     "vscode",
     "theme",
     "vesper purple",
     "dark"
   ],
-  "contributes": {
-    "themes": [
-      {
-        "label": "Vesper Purple",
-        "uiTheme": "vs-dark",
-        "path": "./themes/vesper-purple-color-theme.json"
-      }
-    ]
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xinyao27/vscode-theme"
   },
+  "publisher": "xinyao27",
   "files": [
-    "themes/*",
-    "package.json"
+    "package.json",
+    "themes/*"
   ],
   "module": "./themes/vesper-purple-color-theme.js",
   "types": "./themes/vesper-purple-color-theme.d.ts",
@@ -54,10 +39,26 @@
   "devDependencies": {
     "@types/bun": "^1.1.2",
     "@vscode/vsce": "^2.26.1",
-    "@xystack/style-guide": "^0.0.5",
+    "@xystack/style-guide": "^0.1.4",
     "eslint": "^9.2.0",
     "prettier": "^3.2.5",
-    "release-it": "^17.2.1"
+    "release-it": "^17.2.1",
+    "typescript": "^5.4.5"
+  },
+  "engines": {
+    "vscode": "^1.64.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Vesper Purple",
+        "uiTheme": "vs-dark",
+        "path": "./themes/vesper-purple-color-theme.json"
+      }
+    ]
   },
   "prettier": "@xystack/style-guide/prettier"
 }
