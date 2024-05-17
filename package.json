@@ -2,6 +2,7 @@
   "name": "vesper-purple-theme",
   "displayName": "Vesper Purple Theme",
   "description": "An vesper purple theme for VS Code",
+  "type": "module",
   "version": "0.1.1",
   "icon": "images/icon.png",
   "repository": {
@@ -30,6 +31,19 @@
       }
     ]
   },
+  "files": [
+    "themes/*",
+    "package.json"
+  ],
+  "module": "./themes/vesper-purple-color-theme.js",
+  "types": "./themes/vesper-purple-color-theme.d.ts",
+  "exports": {
+    ".": {
+      "types": "./themes/vesper-purple-color-theme.d.ts",
+      "import": "./themes/vesper-purple-color-theme.js"
+    }
+  },
+  "sideEffects": false,
   "scripts": {
     "dev": "bun --watch run ./scripts/index.ts",
     "build": "bun run ./scripts/index.ts",
@@ -41,6 +55,8 @@
     "@types/bun": "^1.1.2",
     "@vscode/vsce": "^2.26.1",
     "@xystack/style-guide": "^0.0.5",
+    "eslint": "^9.2.0",
+    "prettier": "^3.2.5",
     "release-it": "^17.2.1"
   },
   "prettier": "@xystack/style-guide/prettier"
