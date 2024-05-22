@@ -20,6 +20,9 @@ export interface Theme {
   rules: Rule[]
 }
 
-const theme: Theme
+const theme: {
+  light: Theme
+  dark: Theme
+}
 
 export default theme

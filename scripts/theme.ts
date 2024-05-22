@@ -1,6 +1,6 @@
 import { Themes } from './colors'
-import type { GetThemeOptions } from './helper'
 import { createThemeHelpers, toArray } from './helper'
+import type { GetThemeOptions } from './helper'
 
 export default function getTheme(options: GetThemeOptions) {
   const { pick, v, colors } = createThemeHelpers(options)
@@ -24,7 +24,7 @@ export default function getTheme(options: GetThemeOptions) {
     name: options.name,
     base: pick({ light: 'vs', dark: 'vs-dark' }),
     colors: {
-      focusBorder: '#00000000',
+      focusBorder: colors.black,
       foreground,
       descriptionForeground: secondaryForeground,
       errorForeground: v('red'),
@@ -34,15 +34,15 @@ export default function getTheme(options: GetThemeOptions) {
       'textBlockQuote.background': background,
       'textBlockQuote.border': border,
       'textCodeBlock.background': background,
-      'textPreformat.foreground': colors.gray[6],
-      'textSeparator.foreground': colors.gray[3],
+      'textPreformat.foreground': colors.gray['600'],
+      'textSeparator.foreground': colors.gray['300'],
 
       'button.background': primary,
       'button.foreground': background,
       'button.hoverBackground': primary,
 
       'checkbox.background': activeBackground,
-      'checkbox.border': pick({ light: colors.gray[3], dark: colors.gray[1] }),
+      'checkbox.border': pick({ light: colors.gray['300'], dark: colors.gray['100'] }),
 
       'dropdown.background': background,
       'dropdown.border': border,
@@ -62,7 +62,7 @@ export default function getTheme(options: GetThemeOptions) {
 
       'titleBar.activeForeground': activeForeground,
       'titleBar.activeBackground': background,
-      'titleBar.inactiveForeground': colors.gray[5],
+      'titleBar.inactiveForeground': colors.gray['500'],
       'titleBar.inactiveBackground': background,
       'titleBar.border': activeBackground,
 
@@ -92,9 +92,9 @@ export default function getTheme(options: GetThemeOptions) {
       'list.focusBackground': activeBackground,
       'list.highlightForeground': primary,
 
-      'tree.indentGuidesStroke': pick({ light: colors.gray[2], dark: colors.gray[1] }),
+      'tree.indentGuidesStroke': pick({ light: colors.gray['200'], dark: colors.gray['100'] }),
 
-      'notificationCenterHeader.foreground': colors.gray[5],
+      'notificationCenterHeader.foreground': colors.gray['500'],
       'notificationCenterHeader.background': background,
       'notifications.foreground': foreground,
       'notifications.background': background,
@@ -122,7 +122,7 @@ export default function getTheme(options: GetThemeOptions) {
       'editorGroup.border': border,
 
       'tab.activeForeground': foreground,
-      'tab.inactiveForeground': colors.gray[5],
+      'tab.inactiveForeground': colors.gray['500'],
       'tab.inactiveBackground': background,
       'tab.activeBackground': background,
       'tab.hoverBackground': activeBackground,
@@ -133,7 +133,7 @@ export default function getTheme(options: GetThemeOptions) {
       'tab.unfocusedActiveBorder': border,
       'tab.activeBorderTop': secondaryForeground,
 
-      'breadcrumb.foreground': colors.gray[5],
+      'breadcrumb.foreground': colors.gray['500'],
       'breadcrumb.focusForeground': foreground,
       'breadcrumb.background': activeBackground,
       'breadcrumb.activeSelectionForeground': selectionBackgroundActive,
@@ -151,8 +151,8 @@ export default function getTheme(options: GetThemeOptions) {
       'editorWhitespace.foreground': pick({ light: '#00000015', dark: '#ffffff15' }),
       // 'editorCursor.foreground': primary,
 
-      'editor.findMatchBackground': pick({ light: '#e6cc7744', dark: '#e6cc7722' }),
-      'editor.findMatchHighlightBackground': pick({ light: '#e6cc7766', dark: '#e6cc7744' }),
+      'editor.findMatchBackground': v('yellow', '10'),
+      'editor.findMatchHighlightBackground': v('yellow', '20'),
       'editor.inactiveSelectionBackground': selectionBackgroundInActive,
       'editor.selectionBackground': selectionBackground,
       'editor.selectionHighlightBackground': selectionBackgroundInActive,
@@ -173,8 +173,8 @@ export default function getTheme(options: GetThemeOptions) {
       'panel.border': border,
       'panelTitle.activeBorder': primary,
       'panelTitle.activeForeground': foreground,
-      'panelTitle.inactiveForeground': colors.gray[5],
-      'panelInput.border': pick({ light: colors.gray[2], dark: colors.gray[1] }),
+      'panelTitle.inactiveForeground': colors.gray['500'],
+      'panelInput.border': pick({ light: colors.gray['200'], dark: colors.gray['100'] }),
 
       'terminal.foreground': foreground,
       'terminal.selectionBackground': selectionBackground,
@@ -215,18 +215,18 @@ export default function getTheme(options: GetThemeOptions) {
       'editorBracketHighlight.foreground6': v('blue'),
 
       'debugToolBar.background': background,
-      'editor.stackFrameHighlightBackground': pick({ light: colors.yellow[1], dark: '#a707' }),
-      'editor.focusedStackFrameHighlightBackground': pick({ light: colors.yellow[2], dark: '#b808' }),
+      'editor.stackFrameHighlightBackground': pick({ light: colors.yellow['100'], dark: colors.yellow['800'] }),
+      'editor.focusedStackFrameHighlightBackground': pick({ light: colors.yellow['200'], dark: colors.yellow['800'] }),
 
-      'peekViewEditor.matchHighlightBackground': pick({ dark: '#ffd33d33', light: undefined }),
-      'peekViewResult.matchHighlightBackground': pick({ dark: '#ffd33d33', light: undefined }),
+      'peekViewEditor.matchHighlightBackground': pick({ dark: colors.yellow['800'], light: undefined }),
+      'peekViewResult.matchHighlightBackground': pick({ dark: colors.yellow['800'], light: undefined }),
       'peekViewEditor.background': background,
       'peekViewResult.background': background,
 
       'settings.headerForeground': foreground,
       'settings.modifiedItemIndicator': primary,
-      'welcomePage.buttonBackground': colors.gray[1],
-      'welcomePage.buttonHoverBackground': colors.gray[2],
+      'welcomePage.buttonBackground': colors.gray['100'],
+      'welcomePage.buttonHoverBackground': colors.gray['200'],
 
       'problemsErrorIcon.foreground': v('red'),
       'problemsWarningIcon.foreground': v('orange'),
@@ -400,43 +400,43 @@ export default function getTheme(options: GetThemeOptions) {
         scope: 'invalid.broken',
         settings: {
           fontStyle: 'italic',
-          foreground: colors.red[7],
+          foreground: colors.red['700'],
         },
       },
       {
         scope: 'invalid.deprecated',
         settings: {
           fontStyle: 'italic',
-          foreground: colors.red[7],
+          foreground: colors.red['700'],
         },
       },
       {
         scope: 'invalid.illegal',
         settings: {
           fontStyle: 'italic',
-          foreground: colors.red[7],
+          foreground: colors.red['700'],
         },
       },
       {
         scope: 'invalid.unimplemented',
         settings: {
           fontStyle: 'italic',
-          foreground: colors.red[7],
+          foreground: colors.red['700'],
         },
       },
       {
         scope: 'carriage-return',
         settings: {
           fontStyle: 'italic underline',
-          background: pick({ light: colors.red[5], dark: colors.red[6] }),
-          foreground: colors.gray[0],
+          background: pick({ light: colors.red['500'], dark: colors.red['600'] }),
+          foreground: colors.gray['50'],
           content: '^M',
         },
       },
       {
         scope: 'message.error',
         settings: {
-          foreground: colors.red[7],
+          foreground: colors.red['700'],
         },
       },
       {
@@ -540,55 +540,55 @@ export default function getTheme(options: GetThemeOptions) {
       {
         scope: ['markup.deleted', 'meta.diff.header.from-file', 'punctuation.definition.deleted'],
         settings: {
-          background: colors.red[0],
-          foreground: colors.red[7],
+          background: colors.red['50'],
+          foreground: colors.red['700'],
         },
       },
       {
         scope: ['markup.inserted', 'meta.diff.header.to-file', 'punctuation.definition.inserted'],
         settings: {
-          background: colors.green[0],
-          foreground: colors.green[6],
+          background: colors.green['50'],
+          foreground: colors.green['600'],
         },
       },
       {
         scope: ['markup.changed', 'punctuation.definition.changed'],
         settings: {
-          background: colors.orange[1],
-          foreground: colors.orange[6],
+          background: colors.orange['100'],
+          foreground: colors.orange['600'],
         },
       },
       {
         scope: ['markup.ignored', 'markup.untracked'],
         settings: {
-          foreground: colors.gray[1],
-          background: colors.blue[6],
+          foreground: colors.gray['100'],
+          background: colors.blue['600'],
         },
       },
       {
         scope: 'meta.diff.range',
         settings: {
-          foreground: pick({ light: colors.purple[5], dark: colors.purple[6] }),
+          foreground: pick({ light: colors.purple['500'], dark: colors.purple['600'] }),
           fontStyle: 'bold',
         },
       },
       {
         scope: 'meta.diff.header',
         settings: {
-          foreground: colors.blue[6],
+          foreground: colors.blue['600'],
         },
       },
       {
         scope: 'meta.separator',
         settings: {
           fontStyle: 'bold',
-          foreground: colors.blue[6],
+          foreground: colors.blue['600'],
         },
       },
       {
         scope: 'meta.output',
         settings: {
-          foreground: colors.blue[6],
+          foreground: colors.blue['600'],
         },
       },
       {
@@ -601,13 +601,13 @@ export default function getTheme(options: GetThemeOptions) {
           'brackethighlighter.quote',
         ],
         settings: {
-          foreground: colors.gray[6],
+          foreground: colors.gray['600'],
         },
       },
       {
         scope: 'brackethighlighter.unmatched',
         settings: {
-          foreground: colors.red[7],
+          foreground: colors.red['700'],
         },
       },
       {

@@ -54,9 +54,14 @@
   "contributes": {
     "themes": [
       {
-        "label": "Vesper Purple",
+        "label": "Vesper Purple Light",
+        "uiTheme": "vs",
+        "path": "./themes/vesper-purple-light-color-theme.json"
+      },
+      {
+        "label": "Vesper Purple Dark",
         "uiTheme": "vs-dark",
-        "path": "./themes/vesper-purple-color-theme.json"
+        "path": "./themes/vesper-purple-dark-color-theme.json"
       }
     ]
   },
