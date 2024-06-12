@@ -24,10 +24,14 @@ export default function getTheme(options: GetThemeOptions) {
     name: options.name,
     base: pick({ light: 'vs', dark: 'vs-dark' }),
     colors: {
-      focusBorder: colors.black,
+      contrastActiveBorder: border,
+      contrastBorder: border,
+
+      focusBorder: primary,
       foreground,
       descriptionForeground: secondaryForeground,
       errorForeground: v('red'),
+      'sash.hoverBorder': primary,
 
       'textLink.foreground': primary,
       'textLink.activeForeground': primary,
@@ -90,9 +94,13 @@ export default function getTheme(options: GetThemeOptions) {
       'list.activeSelectionBackground': activeBackground,
       'list.inactiveFocusBackground': background,
       'list.focusBackground': activeBackground,
+      'list.focusOutline': activeBackground,
       'list.highlightForeground': primary,
+      'list.inactiveFocusOutline': border,
 
       'tree.indentGuidesStroke': pick({ light: colors.gray['200'], dark: colors.gray['100'] }),
+
+      'activityBarTop.activeBorder': primary,
 
       'notificationCenterHeader.foreground': colors.gray['500'],
       'notificationCenterHeader.background': background,
@@ -131,7 +139,7 @@ export default function getTheme(options: GetThemeOptions) {
       'tab.unfocusedActiveBorderTop': border,
       'tab.activeBorder': border,
       'tab.unfocusedActiveBorder': border,
-      'tab.activeBorderTop': secondaryForeground,
+      'tab.activeBorderTop': primary,
 
       'breadcrumb.foreground': colors.gray['500'],
       'breadcrumb.focusForeground': foreground,

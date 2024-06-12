@@ -55,7 +55,7 @@ export const colors = {
     200: '#e9d5ff',
     300: '#d8b4fe',
     400: '#c391e6',
-    500: '#a855f7',
+    500: '#9066df',
     600: '#9333ea',
     700: '#7e22ce',
     800: '#6b21a8',
@@ -356,7 +356,7 @@ export const colors = {
 
 // [dark, light]
 export const Themes = {
-  primary: [colors.purple['400'], colors.purple['400']],
+  primary: [colors.purple['400'], colors.purple['500']],
 
   foreground: ['#dbd7caee', '#393a34'],
   activeForeground: ['#bfbaaa', '#4e4f47'],
@@ -364,10 +364,10 @@ export const Themes = {
 
   ignored: ['#dedcd550', '#393a3450'],
   faded: ['#dedcd510', '#393a3410'],
-  border: [colors.dark['800'], '#f0f0f0'],
+  border: [colors.dark['400'], '#f0f0f0'],
 
   background: ['#121212', '#ffffff'],
-  activeBackground: [colors.dark['500'], '#f7f7f7'],
+  activeBackground: [colors.dark['400'], '#f7f7f7'],
   selectionBackground: [colors.neutral['700'], '#22222218'],
   selectionBackgroundActive: [colors.neutral['800'], '#22222218'],
   selectionBackgroundInActive: [colors.neutral['800'], '#22222210'],
@@ -389,7 +389,7 @@ export const Themes = {
   builtin: ['#ffffff9f', colors.neutral['400']],
   operator: ['#ffffff9f', colors.neutral['400']],
   keyword: ['#ffffff9f', colors.neutral['400']],
-  function: [colors.purple['400'], colors.purple['400']],
+  function: [colors.purple['400'], colors.purple['500']],
   number: [colors.yellow['500'], colors.yellow['500']],
   boolean: [colors.yellow['500'], colors.yellow['500']],
   regex: [colors.yellow['500'], colors.yellow['500']],
@@ -409,5 +409,5 @@ export const Themes = {
   red: [colors.red['300'], colors.red['500']],
   orange: [colors.amber['500'], colors.amber['500']],
   yellow: [colors.yellow['500'], colors.yellow['500']],
-  magenta: [colors.purple['400'], colors.purple['400']],
+  magenta: [colors.purple['400'], colors.purple['500']],
 } satisfies Record<string, [string, string] | string>
