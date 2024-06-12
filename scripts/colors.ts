@@ -358,19 +358,19 @@ export const colors = {
 export const Themes = {
   primary: [colors.purple['400'], colors.purple['500']],
 
-  foreground: ['#dbd7caee', '#393a34'],
-  activeForeground: ['#bfbaaa', '#4e4f47'],
-  secondaryForeground: ['#dedcd590', '#393a3490'],
+  foreground: ['#dbd7caee', colors.dark['200']],
+  activeForeground: ['#bfbaaa', colors.dark['50']],
+  secondaryForeground: ['#dedcd590', `${colors.dark['200']}90`],
 
-  ignored: ['#dedcd550', '#393a3450'],
-  faded: ['#dedcd510', '#393a3410'],
-  border: [colors.dark['400'], '#f0f0f0'],
+  ignored: ['#dedcd550', `${colors.dark['200']}50`],
+  faded: ['#dedcd510', `${colors.dark['200']}10`],
+  border: [colors.dark['400'], colors.neutral['100']],
 
-  background: ['#121212', '#ffffff'],
-  activeBackground: [colors.dark['400'], '#f7f7f7'],
-  selectionBackground: [colors.neutral['700'], '#22222218'],
-  selectionBackgroundActive: [colors.neutral['800'], '#22222218'],
-  selectionBackgroundInActive: [colors.neutral['800'], '#22222210'],
+  background: [colors.neutral['950'], colors.neutral['50']],
+  activeBackground: [colors.dark['400'], colors.neutral['100']],
+  selectionBackground: [colors.neutral['700'], `${colors.dark['400']}18`],
+  selectionBackgroundActive: [colors.neutral['800'], `${colors.dark['400']}18`],
+  selectionBackgroundInActive: [colors.neutral['800'], `${colors.dark['400']}10`],
 
   // soft overrides
   softBackground: [colors.dark['400'], '#F1F0E9'],
@@ -380,11 +380,11 @@ export const Themes = {
   // black overrides
   blackForeground: '#dbd7cacc',
   blackBackground: colors.black,
-  blackActiveBackground: '#121212',
+  blackActiveBackground: colors.neutral['950'],
   blackPunctuation: colors.neutral['400'],
 
   comment: ['#ffffff4f', colors.neutral['400']],
-  string: [colors.neutral['500'], colors.neutral['400']],
+  string: [colors.neutral['400'], colors.neutral['500']],
   punctuation: ['#666666', '#dbd7cacc'],
   builtin: ['#ffffff9f', colors.neutral['400']],
   operator: ['#ffffff9f', colors.neutral['400']],

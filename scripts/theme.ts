@@ -24,8 +24,8 @@ export default function getTheme(options: GetThemeOptions) {
     name: options.name,
     base: pick({ light: 'vs', dark: 'vs-dark' }),
     colors: {
-      contrastActiveBorder: border,
-      contrastBorder: border,
+      contrastActiveBorder: '#ffffff00',
+      contrastBorder: '#ffffff00',
 
       focusBorder: primary,
       foreground,
