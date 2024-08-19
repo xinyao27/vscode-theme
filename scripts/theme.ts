@@ -68,7 +68,7 @@ export default function getTheme(options: GetThemeOptions) {
       'titleBar.activeBackground': background,
       'titleBar.inactiveForeground': colors.gray['500'],
       'titleBar.inactiveBackground': background,
-      'titleBar.border': activeBackground,
+      'titleBar.border': border,
 
       'activityBar.foreground': foreground,
       'activityBar.inactiveForeground': v('ignored'),
